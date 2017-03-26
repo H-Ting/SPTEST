@@ -16,25 +16,6 @@ public class Keypad {
 
         String[][] keypad = new String[][]{{}, {}, {"a", "b", "c"}, {"d", "e", "f"}, {"g", "h", "i"}, {"j", "k", "l"}, {"m", "n", "o"}, {"p", "q", "r", "s"}, {"t", "u", "v"}, {"w", "x", "y", "z"}};
         boolean exit = false;
-//        String dictionary ="";
-
-//        try {
-//            File file = new File("words.txt");
-//            FileReader fileReader = new FileReader(file);
-//            BufferedReader bufferedReader = new BufferedReader(fileReader);
-//            StringBuffer stringBuffer = new StringBuffer();
-//            String line;
-//            while ((line = bufferedReader.readLine()) != null) {
-//                stringBuffer.append(line);
-//                stringBuffer.append("\n");
-//            }
-//            fileReader.close();
-////            System.out.println("Contents of file:");
-////            System.out.println(stringBuffer.toString());
-//            dictionary = stringBuffer.toString();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
 
         do {
             System.out.println("1.Question One");
