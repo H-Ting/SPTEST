@@ -37,7 +37,7 @@ public class Keypad {
             }
         } while (!exit);
     }
-    public static int QOne(String[][] keypad) {
+    private static int QOne(String[][] keypad) {
 
         System.out.println("Question One is chosen!");
         System.out.print("Input: ");
@@ -45,10 +45,11 @@ public class Keypad {
 
         int totalKeypress = 0;
         char[] letters = input.toCharArray();
+
         for (int i = 2; i < 10; i++) {
             for (int j = 0; j < keypad[i].length; j++) {
-                for (int k = 0; k < letters.length; k++) {
-                    if (Character.toString(letters[k]).equalsIgnoreCase(keypad[i][j])) {
+                for (char letter:letters) {
+                    if (Character.toString(letter).equalsIgnoreCase(keypad[i][j])) {
                         totalKeypress += j + 1;
                     }
                 }
@@ -57,34 +58,28 @@ public class Keypad {
         return totalKeypress;
     }
 
-    public static String QTwo(String[][] keypad){
+    private static String QTwo(String[][] keypad){
         System.out.println("Question Two is chosen!");
         System.out.print("Input: ");
         String input = scanner.nextLine();
 
-        String answer ="";
-        return answer;
+        String numPressed = "";
+        StringBuilder stringBuilder = new StringBuilder();
+
+        char[] letters = input.toCharArray();
+
+        for (char letter:letters) {
+            for (int i = 2; i < 10; i++) {
+                for (int j = 0; j < keypad[i].length; j++) {
+                    if (Character.toString(letter).equalsIgnoreCase(keypad[i][j])) {
+                        System.out.println("letter: " + letter + "letter pos: " + Integer.toString(i) );
+                        stringBuilder.append(Integer.toString(i));
+                    }
+                }
+            }
+        }
+        numPressed = stringBuilder.toString();
+        return numPressed;
     }
 }
 
-
-
-
-
-
-//        int totalKeypress = 0;
-//        char[]letters = input.toCharArray();
-//        for (int i = 2; i<10; i++){
-//            for (int j=0;j<keypad[i].length;j++){
-//                for (int k=0; k<letters.length;k++){
-//                    if (Character.toString(letters[k]).equalsIgnoreCase(keypad[i][j])){
-//                        totalKeypress += j+1;
-//                }
-//            }
-//        }
-//
-//    }
-//        System.out.println( "output = " + totalKeypress );
-//    }
-//}
-//
